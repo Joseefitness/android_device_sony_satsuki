@@ -14,12 +14,18 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/sony/satsuki/full_satsuki.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common LineageOS stuff
+# Device
+$(call inherit-product, device/sony/satsuki/device.mk)
+
+# LineageOS common
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Shipping API level
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
-
 PRODUCT_NAME := lineage_satsuki
+PRODUCT_DEVICE := satsuki
+PRODUCT_BRAND := Sony
+PRODUCT_MODEL := Xperia Z5 Premium
+PRODUCT_MANUFACTURER := Sony
