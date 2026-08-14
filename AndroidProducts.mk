@@ -17,6 +17,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_satsuki.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_satsuki-bp4a-user \
-    lineage_satsuki-bp4a-userdebug \
-    lineage_satsuki-bp4a-eng
+    lineage_satsuki-cp2a-user \
+    lineage_satsuki-cp2a-userdebug \
+    lineage_satsuki-cp2a-eng
